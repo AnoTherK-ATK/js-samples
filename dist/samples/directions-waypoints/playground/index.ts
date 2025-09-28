@@ -1,3 +1,9 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 function initMap(): void {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -5,7 +11,7 @@ function initMap(): void {
     document.getElementById("map") as HTMLElement,
     {
       zoom: 6,
-      center: { lat: 41.85, lng: -87.65 },
+      center: { lat: 10.7602, lng: 106.6993 },
     },
   );
 
@@ -75,4 +81,5 @@ declare global {
   }
 }
 window.initMap = initMap;
+
 export {};

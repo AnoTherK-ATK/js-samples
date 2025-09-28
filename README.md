@@ -29,6 +29,72 @@ The samples can be demoed at the [official documentation site](https://developer
 
 1. Start a server with all samples using `npm start`
 
+### Docker
+
+This project includes Docker support for both production and development environments.
+
+#### Production Build
+
+Build and run the production Docker image:
+
+```bash
+# Build the image
+docker build -t google-maps-js-samples .
+
+# Run the container
+docker run -p 8080:80 google-maps-js-samples
+```
+
+Or use Docker Compose:
+
+```bash
+# Build and start the production service
+docker-compose up --build
+
+# Run in detached mode
+docker-compose up -d
+```
+
+The application will be available at `http://localhost:8080`.
+
+#### Development
+
+For development with hot reload:
+
+```bash
+# Start development environment
+docker-compose --profile dev up js-samples-dev
+
+# Or use the Node.js development service
+docker-compose --profile dev up js-samples-node
+```
+
+Development services will be available at:
+- `http://localhost:3000` (js-samples-dev)
+- `http://localhost:3001` (js-samples-node)
+
+#### Docker Commands
+
+```bash
+# Build production image
+docker build -t google-maps-js-samples .
+
+# Build development image
+docker build -f Dockerfile.dev -t google-maps-js-samples:dev .
+
+# Run production container
+docker run -p 8080:80 google-maps-js-samples
+
+# Run development container
+docker run -p 3000:8080 -v $(pwd):/app -v /app/node_modules google-maps-js-samples:dev
+
+# Stop all containers
+docker-compose down
+
+# View logs
+docker-compose logs -f
+```
+
 ### Staging
 
 For staging samples (not common), use Cloud Source Repositories which are controlled by an access control list.

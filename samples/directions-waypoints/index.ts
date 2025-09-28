@@ -12,7 +12,7 @@ function initMap(): void {
     document.getElementById("map") as HTMLElement,
     {
       zoom: 6,
-      center: { lat: 41.85, lng: -87.65 },
+      center: { lat: 10.7602, lng: 106.6993 },
     }
   );
 

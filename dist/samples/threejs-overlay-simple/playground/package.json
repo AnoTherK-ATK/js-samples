@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@googlemaps/three": "^4.0.13",
-    "three": "^0.140.2"
-  }
-}

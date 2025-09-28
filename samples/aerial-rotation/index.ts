@@ -9,7 +9,7 @@ let map: google.maps.Map;
 
 function initMap(): void {
   map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-    center: { lat: 40.76, lng: -73.983 },
+    center: { lat: 10.7602, lng: 106.6993 },
     zoom: 15,
     mapTypeId: "satellite",
     heading: 90,

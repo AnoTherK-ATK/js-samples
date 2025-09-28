@@ -1,0 +1,79 @@
+services:
+  # Production service
+  js-samples:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: google-maps-js-samples
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - js-samples-network
+
+  # Development service with hot reload
+  js-samples-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: google-maps-js-samples-dev
+    ports:
+      - "3000:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - js-samples-network
+    profiles:
+      - dev
+
+  # Node.js development service (alternative)
+  js-samples-node:
+    image: node:18-alpine
+    container_name: google-maps-js-samples-node
+    working_dir: /app
+    ports:
+      - "3001:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "npm ci && npm start"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - js-samples-network
+    profiles:
+      - dev
+
+networks:
+  js-samples-network:
+    driver: bridge
+
+volumes:
+  node_modules:

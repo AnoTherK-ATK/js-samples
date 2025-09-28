@@ -12,7 +12,7 @@ async function initMap() {
 
     const map = new Map(document.getElementById("map") as HTMLElement, {
         zoom: 12,
-        center: { lat: 34.84555, lng: -111.8035 },
+        center: { lat: 10.7602, lng: 106.6993 },
         mapId: '4504f8b37365c3d0',
     });
 
@@ -21,24 +21,24 @@ async function initMap() {
     // between markers; press tab again to cycle through the map controls.
     const tourStops = [
         {
-            position: { lat: 34.8791806, lng: -111.8265049 }, 
-            title: "Boynton Pass"
+            position: { lat: 10.760737924711854, lng: 106.6990632037664 }, 
+            title: "Cloud Ace"
         },
         {
-            position: { lat: 34.8559195, lng: -111.7988186 }, 
-            title: "Airport Mesa"
+            position: { lat: 10.770840521840839, lng: 106.69671558309894 }, 
+            title: "Metro Bến Thành"
         },
         {
-            position: { lat: 34.832149, lng: -111.7695277 }, 
-            title: "Chapel of the Holy Cross"
+            position: { lat: 10.7771325388983, lng: 106.69528659660571 }, 
+            title: "Dinh Độc Lập"
         },
         {
-            position: { lat: 34.823736, lng: -111.8001857 }, 
-            title: "Red Rock Crossing"
+            position: { lat: 10.776831728326824, lng: 106.70278877569518 }, 
+            title: "Nhà hát Thành phố"
         },
         {
-            position: { lat: 34.800326, lng: -111.7665047 }, 
-            title: "Bell Rock"
+            position: { lat: 10.76835877379374, lng: 106.70682055901337 }, 
+            title: "Bến nhà Rồng"
         },
     ];
 

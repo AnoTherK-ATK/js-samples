@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 function initMap(): void {
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
@@ -11,7 +12,7 @@ function initMap(): void {
     document.getElementById("map") as HTMLElement,
     {
       zoom: 7,
-      center: { lat: 41.85, lng: -87.65 },
+      center: { lat: 10.7602, lng: 106.6993 },
       disableDefaultUI: true,
     }
   );
@@ -64,4 +65,5 @@ declare global {
   }
 }
 window.initMap = initMap;
+
 export {};

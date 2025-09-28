@@ -1,3 +1,9 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 function initMap(): void {
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
@@ -5,7 +11,7 @@ function initMap(): void {
     document.getElementById("map") as HTMLElement,
     {
       zoom: 14,
-      center: { lat: 37.77, lng: -122.447 },
+      center: { lat: 10.7602, lng: 106.6993 },
     },
   );
 
@@ -29,8 +35,8 @@ function calculateAndDisplayRoute(
 
   directionsService
     .route({
-      origin: { lat: 37.77, lng: -122.447 }, // Haight.
-      destination: { lat: 37.768, lng: -122.511 }, // Ocean Beach.
+      origin: { lat: 10.760737924711854, lng: 106.6990632037664 }, // Cloud Ace
+      destination: { lat: 10.7771325388983, lng: 106.69528659660571 }, // Dinh Độc Lập
       // Note that Javascript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
@@ -48,4 +54,5 @@ declare global {
   }
 }
 window.initMap = initMap;
+
 export {};

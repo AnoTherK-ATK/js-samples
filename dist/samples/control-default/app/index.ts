@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
     {
-      center: { lat: -34.397, lng: 150.644 },
+      center: { lat: 10.7602, lng: 106.6993 },
       zoom: 8,
     }
   );
@@ -20,4 +21,5 @@ declare global {
   }
 }
 window.initMap = initMap;
+
 export {};

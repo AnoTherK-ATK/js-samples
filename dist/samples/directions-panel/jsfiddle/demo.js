@@ -8,7 +8,7 @@ function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
-    center: { lat: 41.85, lng: -87.65 },
+    center: { lat: 10.7602, lng: 106.6993 },
     disableDefaultUI: true,
   });
 
