@@ -41,7 +41,24 @@ module.exports = function (eleventyConfig) {
       throw new Error("No samples found in samples collection");
     }
 
-    return samples;
+    // Filter to only show specific samples (hide all others)
+    // Example: only show 'add-map' sample
+    const allowedSamples = [
+      'add-map',
+      'advanced-markers-accessibility',
+      'aerial-rotation',
+      'control-default',
+      'direction-panel',
+      'direction-waypoints',
+      'direction-travel-modes',
+      'layer-traffic',
+      'places-autocomplete'
+    ];
+    const filteredSamples = samples.filter(sample =>
+      allowedSamples.includes(sample.fileSlug)
+    );
+
+    return filteredSamples;
   });
 
   // build sample iframes after building the site using vite and a plugin to

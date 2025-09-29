@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+
+<html>
+  <head>
+    <title>Displaying Text Directions With setPanel()</title>
+
+    <script type="module" crossorigin src="./assets/index-DjKPFlls.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C14X_HsE.css">
+  </head>
+  <body>
+    <div id="floating-panel">
+      <strong>Start:</strong>
+      <select id="start">
+        <option value="hanoi, vietnam">Hanoi</option>
+        <option value="ha long, vietnam">Ha Long</option>
+        <option value="hue, vietnam">Hue</option>
+        <option value="da nang, vietnam">Da Nang</option>
+        <option value="hoi an, vietnam">Hoi An</option>
+        <option value="nha trang, vietnam">Nha Trang</option>
+        <option value="da lat, vietnam">Da Lat</option>
+        <option value="mui ne, vietnam">Mui Ne</option>
+        <option value="vung tau, vietnam">Vung Tau</option>
+        <option value="ho chi minh city, vietnam">Ho Chi Minh City</option>
+        <option value="can tho, vietnam">Can Tho</option>
+        <option value="phu quoc, vietnam">Phu Quoc</option>
+      </select>
+      <br />
+      <strong>End:</strong>
+      <select id="end">
+        <option value="hanoi, vietnam">Hanoi</option>
+        <option value="ha long, vietnam">Ha Long</option>
+        <option value="hue, vietnam">Hue</option>
+        <option value="da nang, vietnam">Da Nang</option>
+        <option value="hoi an, vietnam">Hoi An</option>
+        <option value="nha trang, vietnam">Nha Trang</option>
+        <option value="da lat, vietnam">Da Lat</option>
+        <option value="mui ne, vietnam">Mui Ne</option>
+        <option value="vung tau, vietnam">Vung Tau</option>
+        <option value="ho chi minh city, vietnam">Ho Chi Minh City</option>
+        <option value="can tho, vietnam">Can Tho</option>
+        <option value="phu quoc, vietnam">Phu Quoc</option>
+      </select>
+    </div>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar"></div>
+    </div>
+    <div style="display: none">
+      <div id="floating-panel">
+        <strong>Start:</strong>
+        <select id="start">
+          <option value="hanoi, vietnam">Hanoi</option>
+          <option value="ha long, vietnam">Ha Long</option>
+          <option value="hue, vietnam">Hue</option>
+          <option value="da nang, vietnam">Da Nang</option>
+          <option value="hoi an, vietnam">Hoi An</option>
+          <option value="nha trang, vietnam">Nha Trang</option>
+          <option value="da lat, vietnam">Da Lat</option>
+          <option value="mui ne, vietnam">Mui Ne</option>
+          <option value="vung tau, vietnam">Vung Tau</option>
+          <option value="ho chi minh city, vietnam">Ho Chi Minh City</option>
+          <option value="can tho, vietnam">Can Tho</option>
+          <option value="phu quoc, vietnam">Phu Quoc</option>
+        </select>
+        <br />
+        <strong>End:</strong>
+        <select id="end">
+          <option value="hanoi, vietnam">Hanoi</option>
+          <option value="ha long, vietnam">Ha Long</option>
+          <option value="hue, vietnam">Hue</option>
+          <option value="da nang, vietnam">Da Nang</option>
+          <option value="hoi an, vietnam">Hoi An</option>
+          <option value="nha trang, vietnam">Nha Trang</option>
+          <option value="da lat, vietnam">Da Lat</option>
+          <option value="mui ne, vietnam">Mui Ne</option>
+          <option value="vung tau, vietnam">Vung Tau</option>
+          <option value="ho chi minh city, vietnam">Ho Chi Minh City</option>
+          <option value="can tho, vietnam">Can Tho</option>
+          <option value="phu quoc, vietnam">Phu Quoc</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>

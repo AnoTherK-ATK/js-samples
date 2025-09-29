@@ -1,0 +1,13 @@
+{
+    "title": "Add a Map with Markers using HTML",
+    "libraries": ["maps,marker"],
+    "version": "beta",
+    "tag": "web_components_markers",
+    "name": "web-components-markers",
+    "pagination": {
+      "data": "mode",
+      "size": 1,
+      "alias": "mode"
+    },
+    "permalink": "samples/{{ page.fileSlug }}/{{mode}}/{% if mode == 'jsfiddle' %}demo{% else %}index{% endif %}.{{ page.outputFileExtension }}"
+  }

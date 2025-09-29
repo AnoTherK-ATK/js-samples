@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+
+<html>
+  <head>
+    <title>Waypoints in Directions</title>
+
+    <script type="module" crossorigin src="./assets/index-DjqejCbH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-XgzcKmWr.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar">
+        <div>
+          <b>Start:</b>
+          <select id="start">
+            <option value="hanoi, vietnam">Hanoi</option>
+            <option value="ha giang, vietnam">Ha Giang</option>
+            <option value="ha long, vietnam">Ha Long</option>
+            <option value="sa pa, vietnam">Sa Pa</option>
+          </select>
+          <br />
+          <b>Waypoints:</b> <br />
+          <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br />
+          <select multiple id="waypoints">
+            <option value="phong nha, vietnam">Phong Nha</option>
+            <option value="hue, vietnam">Hue</option>
+            <option value="da nang, vietnam">Da Nang</option>
+            <option value="hoi an, vietnam">Hoi An</option>
+            <option value="nha trang, vietnam">Nha Trang</option>
+            <option value="da lat, vietnam">Da Lat</option>
+            <option value="mui ne, vietnam">Mui Ne</option>
+          </select>
+          <br />
+          <b>End:</b>
+          <select id="end">
+            <option value="ho chi minh city, vietnam">Ho Chi Minh City</option>
+            <option value="vung tau, vietnam">Vung Tau</option>
+            <option value="can tho, vietnam">Can Tho</option>
+            <option value="phu quoc, vietnam">Phu Quoc</option>
+          </select>
+          <br />
+          <input type="submit" id="submit" />
+        </div>
+        <div id="directions-panel"></div>
+      </div>
+    </div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
